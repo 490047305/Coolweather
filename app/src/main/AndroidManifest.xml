@@ -24,6 +24,8 @@
             android:name=".service.AutoUpdateService"
             android:enabled="true"
             android:exported="true" />
+
+        <activity android:name=".ForecastActivity"></activity>
     </application>
 
 </manifest>
