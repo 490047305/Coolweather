@@ -83,7 +83,6 @@ public class WeatherActivity extends AppCompatActivity {
         titleUpdateTime = (TextView) findViewById(R.id.title_update_time);
         degreeText = (TextView) findViewById(R.id.degree_text);
         weatherInfoText = (TextView) findViewById(R.id.weather_info_text);
-//        forecastLayout = (LinearLayout) findViewById(R.id.forecast_layout);
         aqiText = (TextView) findViewById(R.id.aqi_text);
         pm25Text = (TextView) findViewById(R.id.pm25_text);
         comfortText = (TextView) findViewById(R.id.comfort_text);
@@ -125,10 +124,12 @@ public class WeatherActivity extends AppCompatActivity {
             loadBingPic();
         }
 
+//        当点击温度的时候将会启动另一个活动，用于展示最近几天的天气数据
         degreeText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(WeatherActivity.this,ForecastActivity.class);
+                intent.putExtra("weatherId",mWeatherId);
                 startActivity(intent);
             }
         });

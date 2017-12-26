@@ -39,7 +39,7 @@
                     <include layout="@layout/now" />
 
                     <include layout="@layout/aqi" />
-
+-p
                     <include layout="@layout/suggestion" />
 
                 </LinearLayout>
