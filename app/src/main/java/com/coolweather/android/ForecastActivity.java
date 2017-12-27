@@ -1,6 +1,7 @@
 package com.coolweather.android;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -44,8 +45,14 @@ public class ForecastActivity extends Activity {
             requestWeather(weatherId);
         }
 
-//        Button goBack=findViewById(R.id.go_back);
-
+        Button goBack=(Button)findViewById(R.id.go_back);
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ForecastActivity.this,WeatherActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //    加载未来天气预报
@@ -98,5 +105,10 @@ public class ForecastActivity extends Activity {
                 });
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

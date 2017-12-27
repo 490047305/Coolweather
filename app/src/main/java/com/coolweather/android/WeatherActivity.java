@@ -50,8 +50,6 @@ public class WeatherActivity extends AppCompatActivity {
 
     private TextView weatherInfoText;
 
-//    private LinearLayout forecastLayout;
-
     private TextView aqiText;
 
     private TextView pm25Text;
@@ -213,7 +211,7 @@ public class WeatherActivity extends AppCompatActivity {
         String degree = weather.now.temperature + "℃";
         String weatherInfo = weather.now.more.info;
         titleCity.setText(cityName);
-        titleUpdateTime.setText(updateTime);
+        titleUpdateTime.setText("最近更新时间："+updateTime);
         degreeText.setText(degree);
         weatherInfoText.setText(weatherInfo);
         if (weather.aqi != null) {
