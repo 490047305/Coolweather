@@ -7,7 +7,7 @@
     android:layout_marginLeft="2dp"
     android:layout_marginRight="2dp"
     android:background="#8000"
-    android:layout_marginTop="150dp">
+    android:layout_marginTop="170dp">
 
     <TextView
         android:layout_width="wrap_content"
